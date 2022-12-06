@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Agenor';
+    src: url('Agenor-Bold.eot');
+    src: local('Agenor Bold'), local('Agenor-Bold'),
+        url('Agenor-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Agenor-Bold.woff2') format('woff2'),
+        url('Agenor-Bold.woff') format('woff'),
+        url('Agenor-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Agenor';
+    src: url('Agenor-Thin.eot');
+    src: local('Agenor Thin'), local('Agenor-Thin'),
+        url('Agenor-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Agenor-Thin.woff2') format('woff2'),
+        url('Agenor-Thin.woff') format('woff'),
+        url('Agenor-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Agenor';
+    src: url('Agenor-Black.eot');
+    src: local('Agenor Black'), local('Agenor-Black'),
+        url('Agenor-Black.eot?#iefix') format('embedded-opentype'),
+        url('Agenor-Black.woff2') format('woff2'),
+        url('Agenor-Black.woff') format('woff'),
+        url('Agenor-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Agenor';
+    src: url('Agenor-Regular.eot');
+    src: local('Agenor Regular'), local('Agenor-Regular'),
+        url('Agenor-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Agenor-Regular.woff2') format('woff2'),
+        url('Agenor-Regular.woff') format('woff'),
+        url('Agenor-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Agenor';
+    src: url('Agenor-Light.eot');
+    src: local('Agenor Light'), local('Agenor-Light'),
+        url('Agenor-Light.eot?#iefix') format('embedded-opentype'),
+        url('Agenor-Light.woff2') format('woff2'),
+        url('Agenor-Light.woff') format('woff'),
+        url('Agenor-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+

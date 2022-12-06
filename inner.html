@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- <link rel="stylesheet" href="assets/css/starter.css"> -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="module" src="assets/js/starter.js"></script>
+    <script type="module" src="assets/js/script.js"></script>
+
+    <title>Home Monitor</title>
+  </head>
+  <body>
+    <div class="col-lg-12 mx-auto main-wrapper">
+
+      <header class="py-2 px-5 header-top">
+        <div class="header-top-inner row gx-0 ">
+          <div class="col-sm-6 display-7 text-left mx-0 px-0"><a class="site-title lh-1" href="#">Home Monitor</a></div>
+          <div class="col-sm-6 text-end mx-0 px-0 py-0">
+            <div class="clock-box d-inline-block px-2">
+              <i class="fa-solid fa-clock" style="color: #0ec28b"></i>
+              <span class="clock-dial clock-adj">12 : 35 : 20</span>
+              <span class="clock-time clock-adj">PM</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <content class="col-12 main-content">
+        <div class="main-content-top px-5">
+          <div class="main-content-inner">
+            <div class="row gx-0 pt-5 top-tabs-wrapper">
+              <div class="col-lg-4 ps-0 pe-1 fan-tab">
+                <div class="top-tabs-inner p-4 d-sm-flex justify-content-center align-items-center">
+                  <div class="top-tabs-icon">
+                    <img class="" src="./assets/images/tab-icon-1.png" alt="fan" />
+                  </div>
+                  <div class="top-tabs-text">
+                    <div class="tab-info">
+                      <span>Fan: Auto, Off</span>
+                    </div>
+                    <div class="tab-options">
+                      <ul class="m-0 mt-1 p-0 d-flex flex-wrap justify-content-center">
+                        <li id="f-auto-li">
+                          <input type="radio" id="f-auto" name="f-option" value="Auto" checked>
+                          <label for="f-auto"><span></span>Auto</label>
+                        </li>
+                        <li id="f-on-li">
+                          <input type="radio" id="f-on" name="f-option" value="On">
+                          <label for="f-on"><span></span>On</label>
+                        </li>
+                        <li id="f-off-li">
+                          <input type="radio" id="f-off" name="f-option" value="Off">
+                          <label for="f-off"><span></span>Off</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 px-1 line-tab">
+                <div class="top-tabs-inner p-4 d-sm-flex justify-content-center align-items-center">
+                  <div class="top-tabs-icon">
+                    <img class="" src="./assets/images/tab-icon-2.png" alt="fan" />
+                  </div>
+                  <div class="top-tabs-text">
+                    <div class="tab-info">
+                      <span>Line: Auto, Off</span>
+                    </div>
+                    <div class="tab-options">
+                      <ul class="m-0 mt-1 p-0 d-flex flex-wrap justify-content-center">
+                        <li id="l-auto-li">
+                          <input type="radio" id="l-auto" name="l-option" value="Auto">
+                          <label for="l-auto"><span></span>Auto</label>
+                        </li>
+                        <li id="l-on-li">
+                          <input type="radio" id="l-on" name="l-option" value="On" checked>
+                          <label for="l-on"><span></span>On</label>
+                        </li>
+                        <li id="l-off-li">
+                          <input type="radio" id="l-off" name="l-option" value="Off">
+                          <label for="l-off"><span></span>Off</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 ps-1 pe-0 acr-tab">
+                <div class="top-tabs-inner p-4 d-sm-flex justify-content-center align-items-center">
+                  <div class="top-tabs-icon">
+                    <img class="" src="./assets/images/tab-icon-3.png" alt="fan" />
+                  </div>
+                  <div class="top-tabs-text">
+                    <div class="tab-info">
+                      <span>Acrely: Auto, Batt</span>
+                    </div>
+                    <div class="tab-options">
+                      <ul class="m-0 mt-1 p-0 d-flex flex-wrap justify-content-center">
+                        <li id="a-auto-li">
+                          <input type="radio" id="a-auto" name="a-option" value="Auto">
+                          <label for="a-auto"><span></span>Auto</label>
+                        </li>
+                        <li id="a-on-li">
+                          <input type="radio" id="a-on" name="a-option" value="batt">
+                          <label for="a-on"><span></span>Batt</label>
+                        </li>
+                        <li id="a-off-li">
+                          <input type="radio" id="a-off" name="a-option" value="line" checked>
+                          <label for="a-off"><span></span>Line</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row gx-0 pt-3 dis-table-wrapper">
+              <div class="dis-table-box">
+                <table class="table m-0">
+                  <thead>
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Desc</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>CPU load</td>
+                      <td>0.26</td>
+                    </tr>
+                    <tr>
+                      <td>CPU Temperature</td>
+                      <td>52.1 C</td>
+                    </tr>
+                    <tr>
+                      <td>Ambient Temperature</td>
+                      <td>34.3 C</td>
+                    </tr>
+                    <tr>
+                      <td>HOMEAUTO Uptime</td>
+                      <td>1 day, 11:37:17</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row gx-0 pt-3 status-table-wrapper">
+              <div class="status-table-box">
+                <div class="table-responsive">
+                  <table class="table m-0">
+                    <thead>
+                      <tr>
+                        <th scope="col">Sensor</th>
+                        <th scope="col">Instant</th>
+                        <th scope="col">10 Sec Avg</th>
+                        <th scope="col">1 Min Avg</th>
+                        <th scope="col">5 Min Avg</th>
+                        <th scope="col">10 Min Avg</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Solar</td>
+                        <td>0.00Kwh</td>
+                        <td>0.00Kwh</td>
+                        <td>0.00Kwh</td>
+                        <td>0.00Kwh</td>
+                        <td>0.00Kwh</td>
+                      </tr>
+                      <tr>
+                        <td>Load</td>
+                        <td>0.30Kwh</td>
+                        <td>0.32Kwh</td>
+                        <td>0.35Kwh</td>
+                        <td>0.37Kwh</td>
+                        <td>0.30Kwh</td>
+                      </tr>
+                      <tr>
+                        <td>Grid</td>
+                        <td>0.00Kwh</td>
+                        <td>0.00Kwh</td>
+                        <td>0.00Kwh</td>
+                        <td>0.00Kwh</td>
+                        <td>0.00Kwh</td>
+                      </tr>
+                      <tr>
+                        <td>Pri Batt</td>
+                        <td>-0.30Kwh</td>
+                        <td>-0.32Kwh</td>
+                        <td>-0.35Kwh</td>
+                        <td>-0.37Kwh</td>
+                        <td>-0.30Kwh</td>
+                      </tr>
+                      <tr>
+                        <td>Sec batt</td>
+                        <td>-0.78Kwh</td>
+                        <td>-0.85Kwh</td>
+                        <td>-0.82Kwh</td>
+                        <td>-0.68Kwh</td>
+                        <td>-0.57Kwh</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="row gx-0 pt-3 history-table-wrapper">
+              <div class="history-table-box">
+                <div class="table-responsive">
+                  <table class="table m-0">
+                    <thead>
+                      <tr>
+                        <th scope="col">Log / History</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="cal-date"><i class="fa-solid fa-calendar"></i> 2022-11-24</span>
+                          <span class="wat-time"><i class="fa-solid fa-clock"></i> 13:47:08</span>
+                          <span class="h-data"><span>Info: </span>LineControl: hadb access failed
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="cal-date"><i class="fa-solid fa-calendar"></i> 2022-11-24</span>
+                          <span class="wat-time"><i class="fa-solid fa-clock"></i> 13:47:08</span>
+                          <span class="h-data"><span>Info: </span>LineControl: hadb access failed
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="cal-date"><i class="fa-solid fa-calendar"></i> 2022-11-24</span>
+                          <span class="wat-time"><i class="fa-solid fa-clock"></i> 13:47:08</span>
+                          <span class="h-data"><span>Info: </span>LineControl: hadb access failed
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="cal-date"><i class="fa-solid fa-calendar"></i> 2022-11-24</span>
+                          <span class="wat-time"><i class="fa-solid fa-clock"></i> 13:47:08</span>
+                          <span class="h-data"><span>Info: </span>LineControl: hadb access failed
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="cal-date"><i class="fa-solid fa-calendar"></i> 2022-11-24</span>
+                          <span class="wat-time"><i class="fa-solid fa-clock"></i> 13:47:08</span>
+                          <span class="h-data"><span>Info: </span>LineControl: hadb access failed
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>     
+      </content>
+      <footer class="row gx-0 py-3 px-5 footer-wrapper text-center mt-5">
+        <p class="m-0">Copyright © 2022 HomeMonitor. All Rights Reserved</p>
+      </footer>
+    </div>
+  </body>
+</html>
