@@ -321,6 +321,7 @@ font-family: 'Chivo', sans-serif; */
     font-size: 15px;
     text-decoration: none;
     display: inline;
+    text-transform: capitalize;
 }
 .footer-center-1 ul li:before {
     font-family: "FontAwesome";
@@ -458,6 +459,17 @@ font-family: 'Chivo', sans-serif; */
         padding: 5px 0;
         text-align: center;
         display: block!important;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .navbar-nav {
+        background: #000;
+        opacity: 0.5;
+        margin-top: 15px;
+    }
+    li.nav-item {
+        text-align: center;
     }
 }
 
